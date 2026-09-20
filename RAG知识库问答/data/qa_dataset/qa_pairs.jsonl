@@ -1,5 +1,0 @@
-{"question": "What is RAG?", "reference": "RAG stands for Retrieval-Augmented Generation, which combines retrieval with text generation."}
-{"question": "How does FAISS work?", "reference": "FAISS is a library for efficient similarity search and clustering of dense vectors."}
-{"question": "What is BGE-small?", "reference": "BGE-small is a compact sentence embedding model optimized for Chinese text."}
-{"question": "What is Qwen-1.8B-Chat?", "reference": "Qwen-1.8B-Chat is a 1.8 billion parameter chat model from the Qwen series."}
-{"question": "What does 4-bit quantization do?", "reference": "4-bit quantization reduces model memory usage to fit within 16GB RAM while maintaining acceptable quality."}

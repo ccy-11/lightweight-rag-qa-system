@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Model cache (large binary files)
+model_cache/
+*.faiss
+*.faiss.json
+
+# Experiment outputs
+experiments/results/
+experiments/logs/
+!experiments/templates/
+
+# Data (user-provided PDFs)
+data/pdfs/*
+!data/pdfs/.gitkeep
+data/qa_dataset/*
+!data/qa_dataset/.gitkeep
+!data/qa_dataset/qa_pairs.jsonl
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
