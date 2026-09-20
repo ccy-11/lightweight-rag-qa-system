@@ -1,0 +1,54 @@
+# RAG QA System Configuration
+# All paths are relative to the project root.
+
+# Device: "cpu" or "cuda"
+device: cpu
+
+# HuggingFace model cache directory
+cache_dir: ./model_cache
+
+# PDF input directory (for building the index)
+pdf_dir: ./data/pdfs
+
+# QA dataset directory (for evaluation)
+qa_dir: ./data/qa_dataset
+
+# Where FAISS index files are stored
+index_dir: ./experiments/results
+
+# Where experiment output files are written
+results_dir: ./experiments/results
+log_dir: ./experiments/logs
+
+# Top-k retrieval
+top_k: 5
+
+# Embedding model: "bge-small" or "all-minilm-l6-v2"
+embedding:
+  model: bge-small
+  dim: 512
+
+# Chunking strategy: "fixed_overlap" or "semantic_paragraph"
+chunking:
+  strategy: fixed_overlap
+  fixed_overlap:
+    chunk_size: 512
+    chunk_overlap: 64
+  semantic_paragraph:
+    max_chunk_size: 1024
+
+# Evaluation settings
+eval:
+  # Path to QA dataset (JSONL: {"question": "...", "reference": "..."})
+  qa_dataset_path: ./data/qa_dataset/qa_pairs.jsonl
+  # Max number of questions to evaluate (null = all)
+  max_questions: null
+
+# Random seed for reproducibility
+seed: 42
+
+# LLM settings
+llm:
+  model_id: Qwen/Qwen-1.8B-Chat
+  max_tokens: 512
+  use_quantization: true
